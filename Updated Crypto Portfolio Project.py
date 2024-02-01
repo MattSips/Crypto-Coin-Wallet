@@ -1,4 +1,7 @@
-## GUI is graphical user interface
+## importing necessary packages
+## tkinter for applications creation, message box
+## json and requests for creating the api
+## sqlite3 to use sql to create a database for the wallet and then pull from that database
 
 from tkinter import *
 from tkinter import messagebox, Menu
