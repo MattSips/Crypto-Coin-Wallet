@@ -16,7 +16,7 @@ cursorObj = con.cursor()
 cursorObj.execute("CREATE TABLE IF NOT EXISTS coin(id INTEGER PRIMARY KEY, symbol TEXT, amount INTEGER, price REAL)")
 con.commit()
 
-## add a fav icon
+## option to add a fav icon
 # pycrypto.iconbitmap('favicon.ico') # assuming this icon is in our directory
 
 
