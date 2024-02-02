@@ -19,8 +19,9 @@ con.commit()
 ## option to add a fav icon
 # pycrypto.iconbitmap('favicon.ico') # assuming this icon is in our directory
 
+## all work must be before main loop (at end of doc) or will only run once closed
 
-## all work must be before main loop or will only run once closed
+# creating a reset function in order to update the app once action is selected
 
 def reset():
     for frame in pycrypto.winfo_children():
@@ -29,6 +30,8 @@ def reset():
     app_header()
     app_navigation()
     my_portfolio()
+
+# providing option t odelete and close app
 
 def app_navigation():
         def clear_all():
@@ -49,6 +52,7 @@ def app_navigation():
         pycrypto.config(menu=menu)
 
 
+# connecting to api - main function to run application
 
 def my_portfolio():
     api_request = requests.get(
@@ -90,7 +94,9 @@ def my_portfolio():
     total_current_value = 0
     total_amount_paid = 0
 
-    for i in range(0, 300):
+
+# number of coins searched on coin market cap api
+    for i in range(0, 100):
         for coin in coins:
             if api["data"][i]["symbol"] == coin[1]:
                 total_paid = coin[2] * coin[3]
