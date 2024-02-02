@@ -1,4 +1,7 @@
-## GUI is graphical user interface
+## importing necessary packages
+## tkinter for applications creation, message box
+## json and requests for creating the api
+## sqlite3 to use sql to create a database for the wallet and then pull from that database
 
 from tkinter import *
 from tkinter import messagebox, Menu
@@ -13,9 +16,8 @@ cursorObj = con.cursor()
 cursorObj.execute("CREATE TABLE IF NOT EXISTS coin(id INTEGER PRIMARY KEY, symbol TEXT, amount INTEGER, price REAL)")
 con.commit()
 
-## add a fav icon
-# pycrypto.iconbitmap('favicon.ico') # assuming this icon is in current directory
-
+## option to add a fav icon
+# pycrypto.iconbitmap('favicon.ico') # assuming this icon is in our directory
 
 ## all work must be before main loop (at end of doc) or will only run once closed
 
